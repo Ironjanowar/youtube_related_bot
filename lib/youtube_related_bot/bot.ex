@@ -22,7 +22,10 @@ defmodule YoutubeRelatedBot.Bot do
   end
 
   def handle({:command, :help, _msg}, context) do
-    answer(context, "There is no help command by now :/")
+    answer(
+      context,
+      "Send me any YouTube video and I'll find you some related videos! Just paste a link in this chat :)"
+    )
   end
 
   def handle({:text, text, %{chat: %{id: chat_id}}}, context) do
